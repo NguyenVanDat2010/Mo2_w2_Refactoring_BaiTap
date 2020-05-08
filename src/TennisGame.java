@@ -1,22 +1,28 @@
 public class TennisGame {
 
+    public static final int ZERO = 0;
+    public static final int ONE = 1;
+    public static final int TWO = 2;
+    public static final int THREE = 3;
+    public static final String SUBTRACTION = "-";
+
     public static String getScore(String player1Name, String player2Name, int player1Score, int player2Score) {
         String score = "";
-        int tempScore=0;
+        int tempScore= ZERO;
         if (player1Score==player2Score)
         {
             switch (player1Score)
             {
-                case 0:
+                case ZERO:
                     score = "Love-All";
                     break;
-                case 1:
+                case ONE:
                     score = "Fifteen-All";
                     break;
-                case 2:
+                case TWO:
                     score = "Thirty-All";
                     break;
-                case 3:
+                case THREE:
                     score = "Forty-All";
                     break;
                 default:
@@ -34,22 +40,22 @@ public class TennisGame {
         }
         else
         {
-            for (int i=1; i<3; i++)
+            for (int i = 1; i< THREE; i++)
             {
-                if (i==1) tempScore = player1Score;
-                else { score+="-"; tempScore = player2Score;}
+                if (i==ONE) tempScore = player1Score;
+                else { score+= SUBTRACTION; tempScore = player2Score;}
                 switch(tempScore)
                 {
-                    case 0:
+                    case ZERO:
                         score+="Love";
                         break;
-                    case 1:
+                    case ONE:
                         score+="Fifteen";
                         break;
-                    case 2:
+                    case TWO:
                         score+="Thirty";
                         break;
-                    case 3:
+                    case THREE:
                         score+="Forty";
                         break;
                 }
